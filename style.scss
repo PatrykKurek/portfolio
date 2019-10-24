@@ -1,0 +1,147 @@
+.container{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+.nav-container{
+    background-image: url("./img/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    -webkit-clip-path: polygon(60% 20%, 40% 20%, 40% 60%, 20% 60%, 50% 88%, 80% 60%, 60% 60%);
+    clip-path: polygon(60% 20%, 40% 20%, 40% 60%, 20% 60%, 50% 88%, 80% 60%, 60% 60%);
+}
+.top-menu{
+    display:flex;
+    width: 100%;  
+    text-align: center;
+}
+.top-link{
+display: inline-block;
+width: 100%;
+text-decoration: none;
+font-size: 20px;
+margin-top: 10px;
+}
+.aboutme-container-top{
+   background-color: rgb(236, 243, 243);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+.window{
+    background-image: url("./img/ja.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: relative;
+    height: 25vh;
+    width:25vh;
+    top:-37vh;
+   background-color: red;
+    perspective: 700px;
+    box-sizing: border-box;   
+   
+ 
+}
+
+.opened{
+    border-radius: 50%;
+    height: 25vh;
+    width: 25vh;
+    background-color: white;
+    opacity: 0.8;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: transform 1s ease-in;
+
+}
+.closed{
+    background-image: url("./img/window.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;   
+    position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+background-color: gray;
+}
+.window:hover .opened{
+    transform: rotateY(-180deg);
+}
+.aboutme{
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;   
+    text-align: justify;
+    margin-right: 5px;
+    margin-left: 5px;
+    top:27vh;    
+} 
+.aboutme > ul > li {
+    margin-top: 10px;
+
+}
+.aboutme-container-down{
+    background-color: rgb(208, 231, 231);
+     height: 50vh;
+     width: 100%;     
+}
+.container > ul{
+    box-sizing: border-box;
+    margin-top:20px;
+    width: 80%;
+    perspective: 500px;
+}
+.container > ul > li{
+    position: relative;
+    margin:5px;
+    text-align: center;   
+    height: 30px;
+    border: solid gray 2px;   
+    
+}
+.container > ul > li:before{
+    content: 'before';
+  font-size: 25px;
+ background-color: yellow;
+  right: 0px;
+  bottom: 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px; 
+  text-align: center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  
+}
+.animated{
+    
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transition: 2s transform;
+    backface-visibility: hidden;   
+}
+.projects-container{
+    height: 50vh;
+    width: 100%;
+    background-color:gray; 
+}
+.contact-container{
+    height: 50vh;
+    width: 100%;
+    
+    background-color: rgb(44, 38, 38);
+}
+
